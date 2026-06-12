@@ -24,6 +24,13 @@
 | Logging | `print()` | Structured JSON logging | Dễ đọc log, search, parse và monitor. |
 | Shutdown | Tắt đột ngột | Có lifespan/SIGTERM | Cho request đang chạy hoàn thành trước khi process thoát. |
 
+Checkpoint 1:
+
+- Hiểu vì sao hardcode secret nguy hiểm.
+- Biết dùng environment variables.
+- Hiểu vai trò của health check.
+- Hiểu graceful shutdown.
+
 ## Part 2 - Docker Containerization
 
 ### Exercise 2.1 - Dockerfile cơ bản
@@ -154,13 +161,13 @@ Checkpoint 3:
 Public URL:
 
 ```text
-https://batch02-day12cloudinfrasanddeployment-production-20e4.up.railway.app/
+https://an-symptom-triage.onrender.com
 ```
 
 API URL:
 
 ```text
-https://batch02-day12cloudinfrasanddeployment-production-20e4.up.railway.app/
+https://an-symptom-triage.onrender.com/triage
 ```
 
 ## Part 4 - API Security
