@@ -1,0 +1,31 @@
+{
+  "transcript_id": "server_gemini_20260604T174938414296",
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "system_prompt": "C:\\Documents\\Vin\\buoi6\\Batch02-Day06-AI-Product-Hackathon\\codebase\\backend\\artifacts\\system_prompt.md",
+  "tools": "C:\\Documents\\Vin\\buoi6\\Batch02-Day06-AI-Product-Hackathon\\codebase\\backend\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-06-04T17:49:38",
+  "updated_at": "2026-06-04T17:49:40",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-06-04T17:49:38",
+      "user": "Tôi mới bị hôm nay",
+      "history_length": 3,
+      "status": "answered",
+      "assistant_text": "{\n  \"events\": [\n    {\n      \"type\": \"message\",\n      \"text\": \"Tôi đã ghi nhận bạn mới bắt đầu cảm thấy mệt và chóng mặt từ hôm nay.\",\n      \"confirm\": true\n    },\n    {\n      \"type\": \"question\",\n      \"text\": \"Ngoài mệt và chóng mặt, bạn có kèm theo các triệu chứng khác như đau đầu, buồn nôn, khó thở hay đau ngực không?\",\n      \"quick\": [\n        \"Có đau đầu\",\n        \"Có buồn nôn\",\n        \"Có khó thở/đau ngực\",\n        \"Không có triệu chứng khác\"\n      ]\n    }\n  ],\n  \"profile\": {\n    \"stage\": \"questioning\",\n    \"symptoms\": [\n      {\n        \"label\": \"Mệt\",\n        \"specific\": false\n      },\n      {\n        \"label\": \"Chóng mặt\",\n        \"specific\": false\n      }\n    ],\n    \"confidence\": 30,\n    \"confTier\": \"low\",\n    \"missing\": [\n      \"triệu chứng đi kèm\",\n      \"mức độ nghiêm trọng\"\n    ],\n    \"facts\": {\n      \"duration\": \"hôm nay\",\n      \"temp\": null,\n      \"severity\": null,\n      \"associated\": null,\n      \"context\": null\n    }\n  }\n}",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "{\n  \"events\": [\n    {\n      \"type\": \"message\",\n      \"text\": \"Tôi đã ghi nhận bạn mới bắt đầu cảm thấy mệt và chóng mặt từ hôm nay.\",\n      \"confirm\": true\n    },\n    {\n      \"type\": \"question\",\n      \"text\": \"Ngoài mệt và chóng mặt, bạn có kèm theo các triệu chứng khác như đau đầu, buồn nôn, khó thở hay đau ngực không?\",\n      \"quick\": [\n        \"Có đau đầu\",\n        \"Có buồn nôn\",\n        \"Có khó thở/đau ngực\",\n        \"Không có triệu chứng khác\"\n      ]\n    }\n  ],\n  \"profile\": {\n    \"stage\": \"questioning\",\n    \"symptoms\": [\n      {\n        \"label\": \"Mệt\",\n        \"specific\": false\n      },\n      {\n        \"label\": \"Chóng mặt\",\n        \"specific\": false\n      }\n    ],\n    \"confidence\": 30,\n    \"confTier\": \"low\",\n    \"missing\": [\n      \"triệu chứng đi kèm\",\n      \"mức độ nghiêm trọng\"\n    ],\n    \"facts\": {\n      \"duration\": \"hôm nay\",\n      \"temp\": null,\n      \"severity\": null,\n      \"associated\": null,\n      \"context\": null\n    }\n  }\n}",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-06-04T17:49:40"
+    }
+  ]
+}

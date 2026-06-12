@@ -1,0 +1,31 @@
+{
+  "transcript_id": "server_gemini_20260604T173120846339",
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "system_prompt": "C:\\Documents\\Vin\\buoi6\\Batch02-Day06-AI-Product-Hackathon\\codebase\\backend\\artifacts\\system_prompt.md",
+  "tools": "C:\\Documents\\Vin\\buoi6\\Batch02-Day06-AI-Product-Hackathon\\codebase\\backend\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-06-04T17:31:20",
+  "updated_at": "2026-06-04T17:31:23",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-06-04T17:31:20",
+      "user": "Không sốt, đau đầu nhẹ",
+      "history_length": 9,
+      "status": "answered",
+      "assistant_text": "{\n  \"events\": [\n    {\n      \"type\": \"result\",\n      \"triage\": {\n        \"level\": \"green\",\n        \"eyebrow\": \"Khuyến nghị\",\n        \"label\": \"Theo dõi & tự chăm sóc tại nhà\",\n        \"icon\": \"🌿\",\n        \"reason\": \"Các triệu chứng mệt mỏi, chóng mặt và đau đầu nhẹ mới xuất hiện trong ngày, không kèm sốt hay các dấu hiệu nguy hiểm (như đau đầu dữ dội, khó thở, đau ngực), thường liên quan đến các yếu tố sinh hoạt như thiếu nước, hạ đường huyết hoặc căng thẳng.\",\n        \"conditions\": [\n          {\n            \"name\": \"Thiếu nước hoặc hạ đường huyết\",\n            \"pct\": \"60%\"\n          },\n          {\n            \"name\": \"Căng thẳng hoặc mệt mỏi quá độ\",\n            \"pct\": \"30%\"\n          }\n        ],\n        \"actions\": [\n          \"Nghỉ ngơi ở nơi thoáng mát, yên tĩnh.\",\n          \"Uống đủ nước (nước lọc, nước trái cây hoặc dung dịch bù điện giải).\",\n          \"Ăn nhẹ nếu bạn chưa ăn gì trong vài giờ qua.\",\n          \"Theo dõi sát sao các triệu chứng; nếu tình trạng nặng hơn hoặc không cải thiện sau vài giờ, hãy liên hệ cơ sở y tế.\"\n        ],\n        \"missing\": [\n          \"Tiền sử bệnh lý nền\",\n          \"Các yếu tố tác động gần đây (ăn uống, giấc ngủ)\"\n        ],\n        \"confTier\": \"mid\",\n        \"confidence\": 65,\n        \"ctas\": [\n          {\n            \"label\": \"Lưu tóm tắt\",\n            \"kind\": \"primary\"\n          },\n          {\n            \"label\": \"Bắt đầu lại\",\n            \"kind\": \"ghost\"\n          }\n        ]\n      }\n    }\n  ],\n  \"profile\": {\n    \"stage\": \"done\",\n    \"symptoms\": [\n      {\n        \"label\": \"Mệt mỏi\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Chóng mặt\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Đau đầu\",\n        \"specific\": true\n      }\n    ],\n    \"confidence\": 65,\n    \"confTier\": \"mid\",\n    \"missing\": [\n      \"Tiền sử bệnh lý\",\n      \"Tình trạng ăn uống/nghỉ ngơi\"\n    ],\n    \"facts\": {\n      \"duration\": \"hôm nay\",\n      \"temp\": null,\n      \"severity\": \"nhẹ\",\n      \"associated\": true,\n      \"context\": \"không sốt\"\n    }\n  }\n}",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "{\n  \"events\": [\n    {\n      \"type\": \"result\",\n      \"triage\": {\n        \"level\": \"green\",\n        \"eyebrow\": \"Khuyến nghị\",\n        \"label\": \"Theo dõi & tự chăm sóc tại nhà\",\n        \"icon\": \"🌿\",\n        \"reason\": \"Các triệu chứng mệt mỏi, chóng mặt và đau đầu nhẹ mới xuất hiện trong ngày, không kèm sốt hay các dấu hiệu nguy hiểm (như đau đầu dữ dội, khó thở, đau ngực), thường liên quan đến các yếu tố sinh hoạt như thiếu nước, hạ đường huyết hoặc căng thẳng.\",\n        \"conditions\": [\n          {\n            \"name\": \"Thiếu nước hoặc hạ đường huyết\",\n            \"pct\": \"60%\"\n          },\n          {\n            \"name\": \"Căng thẳng hoặc mệt mỏi quá độ\",\n            \"pct\": \"30%\"\n          }\n        ],\n        \"actions\": [\n          \"Nghỉ ngơi ở nơi thoáng mát, yên tĩnh.\",\n          \"Uống đủ nước (nước lọc, nước trái cây hoặc dung dịch bù điện giải).\",\n          \"Ăn nhẹ nếu bạn chưa ăn gì trong vài giờ qua.\",\n          \"Theo dõi sát sao các triệu chứng; nếu tình trạng nặng hơn hoặc không cải thiện sau vài giờ, hãy liên hệ cơ sở y tế.\"\n        ],\n        \"missing\": [\n          \"Tiền sử bệnh lý nền\",\n          \"Các yếu tố tác động gần đây (ăn uống, giấc ngủ)\"\n        ],\n        \"confTier\": \"mid\",\n        \"confidence\": 65,\n        \"ctas\": [\n          {\n            \"label\": \"Lưu tóm tắt\",\n            \"kind\": \"primary\"\n          },\n          {\n            \"label\": \"Bắt đầu lại\",\n            \"kind\": \"ghost\"\n          }\n        ]\n      }\n    }\n  ],\n  \"profile\": {\n    \"stage\": \"done\",\n    \"symptoms\": [\n      {\n        \"label\": \"Mệt mỏi\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Chóng mặt\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Đau đầu\",\n        \"specific\": true\n      }\n    ],\n    \"confidence\": 65,\n    \"confTier\": \"mid\",\n    \"missing\": [\n      \"Tiền sử bệnh lý\",\n      \"Tình trạng ăn uống/nghỉ ngơi\"\n    ],\n    \"facts\": {\n      \"duration\": \"hôm nay\",\n      \"temp\": null,\n      \"severity\": \"nhẹ\",\n      \"associated\": true,\n      \"context\": \"không sốt\"\n    }\n  }\n}",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-06-04T17:31:23"
+    }
+  ]
+}

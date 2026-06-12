@@ -1,0 +1,13 @@
+node_modules
+dist
+.env
+.env.*
+backend/.env
+backend/.env.*
+backend/__pycache__
+backend/**/*.pyc
+backend/transcripts
+backend/runs
+backend/logs
+backend/arxiv_papers
+.git

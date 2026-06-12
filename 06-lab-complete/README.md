@@ -1,100 +1,148 @@
-# Lab 12 — Complete Production Agent
+# Batch 02 · Day 06 — AI Product Hackathon
 
-Kết hợp TẤT CẢ những gì đã học trong 1 project hoàn chỉnh.
-
-## Checklist Deliverable
-
-- [x] Dockerfile (multi-stage, < 500 MB)
-- [x] docker-compose.yml (agent + redis)
-- [x] .dockerignore
-- [x] Health check endpoint (`GET /health`)
-- [x] Readiness endpoint (`GET /ready`)
-- [x] API Key authentication
-- [x] Rate limiting
-- [x] Cost guard
-- [x] Config từ environment variables
-- [x] Structured logging
-- [x] Graceful shutdown
-- [x] Public URL ready (Railway / Render config)
+> SPEC → Prototype → Demo. Hôm nay không có bài giảng mới — hôm nay chứng minh: SPEC là giả thuyết, prototype là bằng chứng, demo là thuyết phục.
 
 ---
 
-## Cấu Trúc
+## Cách nộp bài
+
+**Đại diện nhóm tạo MỘT repo nhóm**, đặt tên:
 
 ```
-06-lab-complete/
-├── app/
-│   ├── main.py         # Entry point — kết hợp tất cả
-│   ├── config.py       # 12-factor config
-│   ├── auth.py         # API Key + JWT
-│   ├── rate_limiter.py # Rate limiting
-│   └── cost_guard.py   # Budget protection
-├── Dockerfile          # Multi-stage, production-ready
-├── docker-compose.yml  # Full stack
-├── railway.toml        # Deploy Railway
-├── render.yaml         # Deploy Render
-├── .env.example        # Template
-├── .dockerignore
-└── requirements.txt
+Day06-Lop-NhomXX
+```
+
+Ví dụ: `Day06-C401-Nhom03`
+
+- **README của repo nhóm phải liệt kê đủ thành viên** — mỗi người gồm **mã học viên + họ và tên**.
+- Đại diện nhóm nộp **link repo** lên LMS. **Hạn nộp: 23:59 ngày 04/06/2026.**
+- Mỗi thành viên cần **ít nhất một commit thực chất** trong repo (không commit = mất điểm cá nhân).
+
+### Cấu trúc repo nhóm
+
+```
+Day06-Lop-NhomXX/
+├── README.md        ← Danh sách thành viên (mã HV + họ tên) + mô tả ngắn sản phẩm
+├── spec/            ← SPEC sản phẩm (xem hướng dẫn trong spec/)
+└── codebase/        ← Toàn bộ code prototype (xem hướng dẫn trong codebase/)
 ```
 
 ---
 
-## Chạy Local
+## Lịch ngày 06 — 04/06/2026
 
-```bash
-# 1. Setup
-cp .env.example .env
-
-# 2. Chạy với Docker Compose
-docker compose up
-
-# 3. Test
-curl http://localhost/health
-
-# 4. Lấy API key từ .env, test endpoint
-API_KEY=$(grep AGENT_API_KEY .env | cut -d= -f2)
-curl -H "X-API-Key: $API_KEY" \
-     -X POST http://localhost/ask \
-     -H "Content-Type: application/json" \
-     -d '{"question": "What is deployment?"}'
-```
+| Giờ | Mốc | Cần đạt |
+|-----|-----|---------|
+| Sáng | Build | Bắt đầu từ SPEC nhẹ đã làm ở Day 5 |
+| **11:00** | Checkpoint 1 | **Show được ít nhất mockup/prototype chạy được** |
+| **13:00** | Checkpoint 2 | **Lắp được AI vào ít nhất 1 flow** |
+| **15:30** | Checkpoint 3 | **Chuẩn bị xong tài liệu demo + slide** |
+| **16:00** | Demo round | Trình bày trong zone, 10 phút/nhóm |
 
 ---
 
-## Deploy Railway (< 5 phút)
+## Tracks
 
-```bash
-# Cài Railway CLI
-npm i -g @railway/cli
+Mỗi nhóm chọn một lĩnh vực, lấy một app thật trong đó để soi và cải tiến:
 
-# Login và deploy
-railway login
-railway init
-railway variables set OPENAI_API_KEY=sk-...
-railway variables set AGENT_API_KEY=your-secret-key
-railway up
+| Track | App thật gợi ý |
+|-------|----------------|
+| **Learning OS** (Vin AI Thực Chiến) | LMS khóa học, Discord lớp |
+| **Travel & Hospitality** | Vinpearl, Sun World / SunGroup |
+| **Food & Local Delivery** | ShopeeFood, GrabFood, BeFood, Xanh SM Ngon |
+| **Personal Finance** | MoMo, ZaloPay, app ngân hàng |
+| **Healthcare** | Vinmec, Long Châu, Pharmacity |
 
-# Nhận public URL!
-railway domain
-```
+> Các nhóm **cùng track** ngồi **cùng một zone** khi demo.
 
 ---
 
-## Deploy Render
+## Kỳ vọng mỗi demo
 
-1. Push repo lên GitHub
-2. Render Dashboard → New → Blueprint
-3. Connect repo → Render đọc `render.yaml`
-4. Set secrets: `OPENAI_API_KEY`, `AGENT_API_KEY`
-5. Deploy → Nhận URL!
+1. **Product Canvas** — giới thiệu ý tưởng và nỗi đau (painpoint) của người dùng.
+2. **Demo full luồng end-to-end** — show cả happy case lẫn error case.
+3. **AI chạy thật trong ít nhất 1 flow** — không chỉ mockup tĩnh.
 
 ---
 
-## Kiểm Tra Production Readiness
+## Demo round (16:00)
 
-```bash
-python check_production_ready.py
+- Mỗi nhóm **10 phút** (≈ 5 phút trình bày + 5 phút Q&A).
+- Các nhóm khác **phản biện, đặt câu hỏi**.
+- **Đánh giá chéo qua form**: thành viên các nhóm khác chấm điểm.
+- **Tổng kết**: nhóm điểm cao nhất mỗi zone được **bonus**; còn thời gian thì các nhóm điểm cao **present trước cả lớp**; giảng viên đánh giá.
+
+Chi tiết luật chơi + cách chấm: [`hackathon-rules.md`](hackathon-rules.md)
+
+---
+
+## Chấm điểm (Day 5 + Day 6 = 100 điểm)
+
+| Hạng mục | Điểm |
+|----------|------|
+| SPEC | 25 |
+| Prototype | 15 |
+| Demo Day | 25 |
+| Bài tập UX (Day 5) | 10 |
+| Phản ánh cá nhân (reflection) | 25 |
+
+**Điều kiện chặn:** prototype không có lời gọi AI thật → giới hạn 4/10 · không có commit → mất điểm cá nhân · không giải thích được phần mình khi bị hỏi → 0 điểm demo cá nhân.
+
+---
+
+## Tài liệu trong repo này
+
+| Folder / file | Nội dung |
+|---------------|----------|
+| [`hackathon-rules.md`](hackathon-rules.md) | Luật chơi, lịch, demo round, cách chấm |
+| [`spec/`](spec/) | Hướng dẫn viết SPEC sản phẩm (nối tiếp SPEC nhẹ Day 5) |
+| [`codebase/`](codebase/) | Yêu cầu nộp code prototype |
+
+---
+
+*Batch 02 · Ngày 06 — VinUni A20 · AI Thực Chiến · 2026*
+---
+
+## Day 12 Production Deployment
+
+Project deploy path:
+
+```text
+06-lab-complete/codebase
 ```
 
-Script này kiểm tra tất cả items trong checklist và báo cáo những gì còn thiếu.
+Render Blueprint file:
+
+```text
+../render.yaml
+```
+
+Production endpoints:
+
+```text
+GET /health
+POST /triage
+GET /
+```
+
+Public URL:
+
+```text
+
+```
+
+API URL:
+
+```text
+
+```
+
+Render env vars:
+
+```text
+GEMINI_API_KEY=
+TRIAGE_PROVIDER=gemini
+TRIAGE_MODEL=gemini-3.1-flash-lite
+TRIAGE_HISTORY_WINDOW=5
+TRIAGE_MAX_TOOL_ROUNDS=4
+```

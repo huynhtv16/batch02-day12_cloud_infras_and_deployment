@@ -1,0 +1,144 @@
+{
+  "transcript_id": "server_gemini_20260604T174947696060",
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "system_prompt": "C:\\Documents\\Vin\\buoi6\\Batch02-Day06-AI-Product-Hackathon\\codebase\\backend\\artifacts\\system_prompt.md",
+  "tools": "C:\\Documents\\Vin\\buoi6\\Batch02-Day06-AI-Product-Hackathon\\codebase\\backend\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-06-04T17:49:47",
+  "updated_at": "2026-06-04T17:49:54",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-06-04T17:49:47",
+      "user": "Có buồn nôn",
+      "history_length": 6,
+      "status": "answered",
+      "assistant_text": "{\n  \"events\": [\n    {\n      \"type\": \"result\",\n      \"triage\": {\n        \"level\": \"amber\",\n        \"eyebrow\": \"Khuyến nghị\",\n        \"label\": \"Nên gặp bác sĩ trong 24 giờ\",\n        \"icon\": \"🩺\",\n        \"reason\": \"Sự kết hợp giữa mệt mỏi, chóng mặt và buồn nôn mới xuất hiện trong ngày có thể liên quan đến nhiều nguyên nhân, từ các vấn đề về thần kinh (như viêm thần kinh tiền đình), rối loạn tuần hoàn não, hoặc các vấn đề sức khỏe khác. Vì các triệu chứng này xuất hiện đồng thời và gây khó chịu, bạn cần được thăm khám để xác định nguyên nhân chính xác.\",\n        \"conditions\": [\n          {\n            \"name\": \"Viêm thần kinh tiền đình\",\n            \"pct\": \"30%\"\n          },\n          {\n            \"name\": \"Thiếu máu não / Rối loạn tuần hoàn\",\n            \"pct\": \"30%\"\n          },\n          {\n            \"name\": \"Nguyên nhân khác (huyết áp, tiêu hóa, v.v.)\",\n            \"pct\": \"40%\"\n          }\n        ],\n        \"actions\": [\n          \"Nghỉ ngơi tại nơi yên tĩnh, tránh thay đổi tư thế đột ngột.\",\n          \"Uống đủ nước và theo dõi xem có triệu chứng mới xuất hiện không.\",\n          \"Liên hệ cơ sở y tế để được thăm khám sớm.\",\n          \"Nếu xuất hiện các dấu hiệu nguy hiểm như: đau ngực, khó thở, yếu liệt chi, nói khó, hoặc ngất xỉu, hãy đến ngay phòng cấp cứu.\"\n        ],\n        \"confTier\": \"mid\",\n        \"confidence\": 60,\n        \"ctas\": [\n          {\n            \"label\": \"Lưu tóm tắt\",\n            \"kind\": \"primary\"\n          },\n          {\n            \"label\": \"Bắt đầu lại\",\n            \"kind\": \"ghost\"\n          }\n        ]\n      }\n    }\n  ],\n  \"profile\": {\n    \"stage\": \"done\",\n    \"symptoms\": [\n      {\n        \"label\": \"Mệt mỏi\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Chóng mặt\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Buồn nôn\",\n        \"specific\": true\n      }\n    ],\n    \"confidence\": 60,\n    \"confTier\": \"mid\",\n    \"missing\": [\n      \"Tiền sử bệnh lý\",\n      \"Các triệu chứng đi kèm khác (đau đầu, sốt, v.v.)\"\n    ],\n    \"facts\": {\n      \"duration\": \"1 ngày\",\n      \"temp\": null,\n      \"severity\": null,\n      \"associated\": true,\n      \"context\": null\n    }\n  }\n}",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "nguyên nhân mệt mỏi chóng mặt buồn nôn mới xuất hiện trong ngày"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "nguyên nhân mệt mỏi chóng mặt buồn nôn mới xuất hiện trong ngày"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "nguyên nhân mệt mỏi chóng mặt buồn nôn mới xuất hiện trong ngày",
+                "topic": "general",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "chuyên gia Nội thần kinh hơn | Bệnh Viện Đa Khoa Quốc Tế Thu Cúc",
+                    "url": "https://www.facebook.com/bvtc.hn/videos/%EF%B8%8F-hay-%C4%91au-%C4%91%E1%BA%A7u-ch%C3%B3ng-m%E1%BA%B7t-n%E1%BA%B7ng-%C4%91%E1%BA%A7u-m%E1%BB%8Fi-c%E1%BB%95-vai-g%C3%A1y%C4%91%E1%BB%ABng-v%E1%BB%99i-ngh%C4%A9-ch%E1%BB%89-do-stress-hay-t/2037787883786227",
+                    "source": "facebook.com",
+                    "summary": "Bị chóng mặt buồn nôn đau mỏi cổ vai gáy nhưng không sốt liệu có nguy hiểm không? Khi bị đau đầu chóng mặt thì tôi nghĩ ngay đến bệnh lý cổ não của hệ thống",
+                    "score": 0.99719906
+                  },
+                  {
+                    "title": "Cesium toxicity - WikEM",
+                    "url": "https://wikem.org/wiki/Cesium_toxicity/vi",
+                    "source": "wikem.org",
+                    "summary": "Rối loạn tiêu hóa: buồn nôn, nôn, tiêu chảy, giảm cảm giác thèm ăn; Tê hoặc ngứa ran ở môi; Mệt mỏi, yếu cơ; Hypotension, chóng mặt. Độc tính vừa đến nặng. Mất",
+                    "score": 0.9059898
+                  },
+                  {
+                    "title": "Sau tuổi 60, ngủ dậy có biểu hiện đau đầu, chóng mặt cần cảnh giác",
+                    "url": "https://baomoi.com/sau-tuoi-60-ngu-day-co-bieu-hien-dau-dau-chong-mat-can-canh-giac-lam-ngay-dieu-nay-de-song-tho-hon-c55311220.epi",
+                    "source": "baomoi.com",
+                    "summary": "Các bệnh lý như xơ vữa động mạch, tăng huyết áp, tăng cholesterol máu, thiếu máu não, hội chứng Meniere hay một số tổn thương thần kinh trung ương cũng có thể",
+                    "score": 0.6095242
+                  },
+                  {
+                    "title": "Chóng mặt, đau đầu kịch phát: Không nên chủ quan với viêm thần ...",
+                    "url": "https://www.facebook.com/HoanMySaiGon/posts/ch%C3%B3ng-m%E1%BA%B7t-%C4%91au-%C4%91%E1%BA%A7u-k%E1%BB%8Bch-ph%C3%A1t-kh%C3%B4ng-n%C3%AAn-ch%E1%BB%A7-quan-v%E1%BB%9Bi-vi%C3%AAm-th%E1%BA%A7n-kinh-ti%E1%BB%81n-%C4%91%C3%ACnhnhi%E1%BB%81u/1347538077567773",
+                    "source": "facebook.com",
+                    "summary": "Tuy nhiên, những dấu hiệu này có thể cảnh báo viêm thần kinh tiền đình – một bệnh lý ảnh hưởng trực tiếp đến hệ thần kinh điều phối thăng bằng. Chủ quan, chần",
+                    "score": 0.27669054
+                  },
+                  {
+                    "title": "Triệu chứng đau nửa đầu bí mật mà bạn chưa bao giờ để ý",
+                    "url": "https://www.bangkokhospital.com/vn/bangkok-bone-brain/content/hidden-migraine-symptoms-awareness",
+                    "source": "bangkokhospital.com",
+                    "summary": "Bệnh gây ra bởi sự bất thường trong hoạt động của nhiều vùng não, đặc biệt là vùng dưới đồi, thân não, dây thần kinh sinh ba và mạch máu não. Chức năng não bình",
+                    "score": 0.13939638
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "{\n  \"events\": [\n    {\n      \"type\": \"result\",\n      \"triage\": {\n        \"level\": \"amber\",\n        \"eyebrow\": \"Khuyến nghị\",\n        \"label\": \"Nên gặp bác sĩ trong 24 giờ\",\n        \"icon\": \"🩺\",\n        \"reason\": \"Sự kết hợp giữa mệt mỏi, chóng mặt và buồn nôn mới xuất hiện trong ngày có thể liên quan đến nhiều nguyên nhân, từ các vấn đề về thần kinh (như viêm thần kinh tiền đình), rối loạn tuần hoàn não, hoặc các vấn đề sức khỏe khác. Vì các triệu chứng này xuất hiện đồng thời và gây khó chịu, bạn cần được thăm khám để xác định nguyên nhân chính xác.\",\n        \"conditions\": [\n          {\n            \"name\": \"Viêm thần kinh tiền đình\",\n            \"pct\": \"30%\"\n          },\n          {\n            \"name\": \"Thiếu máu não / Rối loạn tuần hoàn\",\n            \"pct\": \"30%\"\n          },\n          {\n            \"name\": \"Nguyên nhân khác (huyết áp, tiêu hóa, v.v.)\",\n            \"pct\": \"40%\"\n          }\n        ],\n        \"actions\": [\n          \"Nghỉ ngơi tại nơi yên tĩnh, tránh thay đổi tư thế đột ngột.\",\n          \"Uống đủ nước và theo dõi xem có triệu chứng mới xuất hiện không.\",\n          \"Liên hệ cơ sở y tế để được thăm khám sớm.\",\n          \"Nếu xuất hiện các dấu hiệu nguy hiểm như: đau ngực, khó thở, yếu liệt chi, nói khó, hoặc ngất xỉu, hãy đến ngay phòng cấp cứu.\"\n        ],\n        \"confTier\": \"mid\",\n        \"confidence\": 60,\n        \"ctas\": [\n          {\n            \"label\": \"Lưu tóm tắt\",\n            \"kind\": \"primary\"\n          },\n          {\n            \"label\": \"Bắt đầu lại\",\n            \"kind\": \"ghost\"\n          }\n        ]\n      }\n    }\n  ],\n  \"profile\": {\n    \"stage\": \"done\",\n    \"symptoms\": [\n      {\n        \"label\": \"Mệt mỏi\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Chóng mặt\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Buồn nôn\",\n        \"specific\": true\n      }\n    ],\n    \"confidence\": 60,\n    \"confTier\": \"mid\",\n    \"missing\": [\n      \"Tiền sử bệnh lý\",\n      \"Các triệu chứng đi kèm khác (đau đầu, sốt, v.v.)\"\n    ],\n    \"facts\": {\n      \"duration\": \"1 ngày\",\n      \"temp\": null,\n      \"severity\": null,\n      \"associated\": true,\n      \"context\": null\n    }\n  }\n}",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "nguyên nhân mệt mỏi chóng mặt buồn nôn mới xuất hiện trong ngày"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "nguyên nhân mệt mỏi chóng mặt buồn nôn mới xuất hiện trong ngày",
+            "topic": "general",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "chuyên gia Nội thần kinh hơn | Bệnh Viện Đa Khoa Quốc Tế Thu Cúc",
+                "url": "https://www.facebook.com/bvtc.hn/videos/%EF%B8%8F-hay-%C4%91au-%C4%91%E1%BA%A7u-ch%C3%B3ng-m%E1%BA%B7t-n%E1%BA%B7ng-%C4%91%E1%BA%A7u-m%E1%BB%8Fi-c%E1%BB%95-vai-g%C3%A1y%C4%91%E1%BB%ABng-v%E1%BB%99i-ngh%C4%A9-ch%E1%BB%89-do-stress-hay-t/2037787883786227",
+                "source": "facebook.com",
+                "summary": "Bị chóng mặt buồn nôn đau mỏi cổ vai gáy nhưng không sốt liệu có nguy hiểm không? Khi bị đau đầu chóng mặt thì tôi nghĩ ngay đến bệnh lý cổ não của hệ thống",
+                "score": 0.99719906
+              },
+              {
+                "title": "Cesium toxicity - WikEM",
+                "url": "https://wikem.org/wiki/Cesium_toxicity/vi",
+                "source": "wikem.org",
+                "summary": "Rối loạn tiêu hóa: buồn nôn, nôn, tiêu chảy, giảm cảm giác thèm ăn; Tê hoặc ngứa ran ở môi; Mệt mỏi, yếu cơ; Hypotension, chóng mặt. Độc tính vừa đến nặng. Mất",
+                "score": 0.9059898
+              },
+              {
+                "title": "Sau tuổi 60, ngủ dậy có biểu hiện đau đầu, chóng mặt cần cảnh giác",
+                "url": "https://baomoi.com/sau-tuoi-60-ngu-day-co-bieu-hien-dau-dau-chong-mat-can-canh-giac-lam-ngay-dieu-nay-de-song-tho-hon-c55311220.epi",
+                "source": "baomoi.com",
+                "summary": "Các bệnh lý như xơ vữa động mạch, tăng huyết áp, tăng cholesterol máu, thiếu máu não, hội chứng Meniere hay một số tổn thương thần kinh trung ương cũng có thể",
+                "score": 0.6095242
+              },
+              {
+                "title": "Chóng mặt, đau đầu kịch phát: Không nên chủ quan với viêm thần ...",
+                "url": "https://www.facebook.com/HoanMySaiGon/posts/ch%C3%B3ng-m%E1%BA%B7t-%C4%91au-%C4%91%E1%BA%A7u-k%E1%BB%8Bch-ph%C3%A1t-kh%C3%B4ng-n%C3%AAn-ch%E1%BB%A7-quan-v%E1%BB%9Bi-vi%C3%AAm-th%E1%BA%A7n-kinh-ti%E1%BB%81n-%C4%91%C3%ACnhnhi%E1%BB%81u/1347538077567773",
+                "source": "facebook.com",
+                "summary": "Tuy nhiên, những dấu hiệu này có thể cảnh báo viêm thần kinh tiền đình – một bệnh lý ảnh hưởng trực tiếp đến hệ thần kinh điều phối thăng bằng. Chủ quan, chần",
+                "score": 0.27669054
+              },
+              {
+                "title": "Triệu chứng đau nửa đầu bí mật mà bạn chưa bao giờ để ý",
+                "url": "https://www.bangkokhospital.com/vn/bangkok-bone-brain/content/hidden-migraine-symptoms-awareness",
+                "source": "bangkokhospital.com",
+                "summary": "Bệnh gây ra bởi sự bất thường trong hoạt động của nhiều vùng não, đặc biệt là vùng dưới đồi, thân não, dây thần kinh sinh ba và mạch máu não. Chức năng não bình",
+                "score": 0.13939638
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-04T17:49:54"
+    }
+  ]
+}

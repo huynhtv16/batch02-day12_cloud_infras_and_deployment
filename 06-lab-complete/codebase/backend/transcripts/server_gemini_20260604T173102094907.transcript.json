@@ -1,0 +1,72 @@
+{
+  "transcript_id": "server_gemini_20260604T173102094907",
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "system_prompt": "C:\\Documents\\Vin\\buoi6\\Batch02-Day06-AI-Product-Hackathon\\codebase\\backend\\artifacts\\system_prompt.md",
+  "tools": "C:\\Documents\\Vin\\buoi6\\Batch02-Day06-AI-Product-Hackathon\\codebase\\backend\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-06-04T17:31:02",
+  "updated_at": "2026-06-04T17:31:14",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-06-04T17:31:02",
+      "user": "Có đau đầu",
+      "history_length": 6,
+      "status": "answered",
+      "assistant_text": "{\n  \"events\": [\n    {\n      \"type\": \"message\",\n      \"text\": \"Tôi đã ghi nhận các triệu chứng của bạn bao gồm: mệt mỏi, chóng mặt và đau đầu, tất cả đều mới xuất hiện từ hôm nay. Hiện tại, tôi đang cân nhắc một số khả năng như: thiếu nước/kiệt sức, hạ đường huyết, hoặc các vấn đề về huyết áp. Để phân biệt rõ hơn, tôi cần biết thêm thông tin về mức độ nghiêm trọng.\",\n      \"confirm\": true\n    },\n    {\n      \"type\": \"question\",\n      \"text\": \"Bạn có đang bị sốt, hoặc cảm thấy đau đầu dữ dội đột ngột không?\",\n      \"quick\": [\n        \"Có sốt\",\n        \"Không sốt, đau đầu nhẹ\",\n        \"Đau đầu dữ dội\"\n      ]\n    }\n  ],\n  \"profile\": {\n    \"stage\": \"questioning\",\n    \"symptoms\": [\n      {\n        \"label\": \"Mệt mỏi\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Chóng mặt\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Đau đầu\",\n        \"specific\": true\n      }\n    ],\n    \"confidence\": 40,\n    \"confTier\": \"low\",\n    \"missing\": [\n      \"Sốt\",\n      \"Mức độ đau đầu\"\n    ],\n    \"facts\": {\n      \"duration\": \"hôm nay\",\n      \"temp\": null,\n      \"severity\": null,\n      \"associated\": true,\n      \"context\": null\n    }\n  }\n}",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "mệt mỏi chóng mặt đau đầu nguyên nhân"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "mệt mỏi chóng mặt đau đầu nguyên nhân"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "mệt mỏi chóng mặt đau đầu nguyên nhân",
+                "topic": "general",
+                "timeframe": "week",
+                "items": []
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "{\n  \"events\": [\n    {\n      \"type\": \"message\",\n      \"text\": \"Tôi đã ghi nhận các triệu chứng của bạn bao gồm: mệt mỏi, chóng mặt và đau đầu, tất cả đều mới xuất hiện từ hôm nay. Hiện tại, tôi đang cân nhắc một số khả năng như: thiếu nước/kiệt sức, hạ đường huyết, hoặc các vấn đề về huyết áp. Để phân biệt rõ hơn, tôi cần biết thêm thông tin về mức độ nghiêm trọng.\",\n      \"confirm\": true\n    },\n    {\n      \"type\": \"question\",\n      \"text\": \"Bạn có đang bị sốt, hoặc cảm thấy đau đầu dữ dội đột ngột không?\",\n      \"quick\": [\n        \"Có sốt\",\n        \"Không sốt, đau đầu nhẹ\",\n        \"Đau đầu dữ dội\"\n      ]\n    }\n  ],\n  \"profile\": {\n    \"stage\": \"questioning\",\n    \"symptoms\": [\n      {\n        \"label\": \"Mệt mỏi\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Chóng mặt\",\n        \"specific\": true\n      },\n      {\n        \"label\": \"Đau đầu\",\n        \"specific\": true\n      }\n    ],\n    \"confidence\": 40,\n    \"confTier\": \"low\",\n    \"missing\": [\n      \"Sốt\",\n      \"Mức độ đau đầu\"\n    ],\n    \"facts\": {\n      \"duration\": \"hôm nay\",\n      \"temp\": null,\n      \"severity\": null,\n      \"associated\": true,\n      \"context\": null\n    }\n  }\n}",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "mệt mỏi chóng mặt đau đầu nguyên nhân"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "mệt mỏi chóng mặt đau đầu nguyên nhân",
+            "topic": "general",
+            "timeframe": "week",
+            "items": []
+          }
+        }
+      ],
+      "ended_at": "2026-06-04T17:31:14"
+    }
+  ]
+}

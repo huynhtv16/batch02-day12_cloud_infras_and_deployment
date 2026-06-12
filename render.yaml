@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: an-symptom-triage
+    runtime: docker
+    rootDir: 06-lab-complete/codebase
+    region: singapore
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: TRIAGE_PROVIDER
+        value: gemini
+      - key: TRIAGE_MODEL
+        value: gemini-3.1-flash-lite
+      - key: TRIAGE_HISTORY_WINDOW
+        value: "5"
+      - key: TRIAGE_MAX_TOOL_ROUNDS
+        value: "4"
+      - key: GEMINI_API_KEY
+        sync: false
