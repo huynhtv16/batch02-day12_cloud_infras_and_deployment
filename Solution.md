@@ -161,13 +161,13 @@ Checkpoint 3:
 Public URL:
 
 ```text
-https://an-symptom-triage.onrender.com
+https://batch02-day12cloudinfrasanddeployment-production-20e4.up.railway.app/
 ```
 
 API URL:
 
 ```text
-https://an-symptom-triage.onrender.com/triage
+https://batch02-day12cloudinfrasanddeployment-production-20e4.up.railway.app/
 ```
 
 ## Part 4 - API Security
@@ -390,11 +390,11 @@ GET / -> 200 text/html
 Public URL:
 
 ```text
-
+https://an-symptom-triage.onrender.com
 ```
 
 API URL:
 
 ```text
-
+https://an-symptom-triage.onrender.com/triage
 ```
