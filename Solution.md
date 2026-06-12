@@ -272,7 +272,7 @@ return True
 Checkpoint 4:
 
 - Đã implement/test API key authentication.
-- Đã hiểu JWT flow.
+- Đã hiểu JWT flow
 - Đã implement/test rate limiting.
 - Đã hiểu cost guard và cách chuyển sang Redis.
 
